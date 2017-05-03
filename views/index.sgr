@@ -1,6 +1,14 @@
 extends(src='layout.sgr')
   block(name='content')
+
     h2 Hello World!
+    h4 Contact me
+    ul
+      li
+        a(href="mailto:asa@asasmith.com") asa@asasmith.com
+      
+
+ //-   h2 Hello World!
     p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
     p Example of locals: {{ foo }}
     p(md) Example of **markdown**
@@ -12,8 +20,8 @@ extends(src='layout.sgr')
     h4 The Stack:
     ul
       li
-        a(href="http://github.com/reshape/reshape") reshape
-        |  for HTML transforms
+	a(href="http://github.com/reshape/reshape") reshape
+	|  for HTML transforms
       li
         a(href="https://babeljs.io/") babel
         |  for JS transforms
@@ -27,3 +35,4 @@ extends(src='layout.sgr')
     p Customize your settings by editing the
       a(href="https://spike.readme.io/docs/appjs") app.js
       |  file or simply start by editing this view
+//
