@@ -1,13 +1,15 @@
 extends(src='layout.sgr')
   block(name='content')
 
-    h2 Hello World!
+    section#hero
+      h1 hello world
+
     h4 Contact me
     ul
       li
         a(href="mailto:asa@asasmith.com") asa@asasmith.com
-      
 
+    
  //-   h2 Hello World!
     p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
     p Example of locals: {{ foo }}
