@@ -21,7 +21,7 @@ const app = {
   write : function() {
     let container = document.querySelector(this.container);
     
-    container.innerText += this.text[this.index];
+    container.textContent += this.text[this.index];
       console.log('current character :', this.text[this.index]);
       if (this.index < this.chars-1) {
 	    this.index++;
