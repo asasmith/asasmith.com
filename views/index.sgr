@@ -2,7 +2,7 @@ extends(src='layout.sgr')
   block(name='content')
 
     section#hero
-      h1 hello world
+      h1.h1
 
     h4 Contact me
     ul
