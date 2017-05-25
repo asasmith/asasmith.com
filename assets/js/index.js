@@ -12,7 +12,7 @@ const app = {
   text : "hello world",
   index : 0,
   chars : 0,
-  speed: 200,
+  speed: 300,
   container : '#hero',
   init : function() {
       this.chars = this.text.length;
