@@ -1,5 +1,12 @@
 body
-  font: normal 100%/150% var(--bodyFont)	
+  font: normal 100%/150% var(--bodyFont)
+
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+  & main
+    flex: 1
 
 
 h1
@@ -8,3 +15,25 @@ h1
 ul
   padding: 0
   list-style: none
+
+a
+  color: currentColor
+  text-decoration: none
+
+svg.icon
+  display: inline-block
+  fill: currentColor
+  height: 2em
+  vertical-align: middle
+  width: 2em
+
+[href*="github"]:hover
+  color: #0366d6
+[href*="codepen"]:hover
+  color: #76daff
+[href*="facebook"]:hover
+  color: #3b5998
+[href*="instagram"]:hover
+  color: #e95950
+[href*="twitter"]:hover
+  color: #55acee

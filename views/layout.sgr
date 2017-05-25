@@ -17,6 +17,10 @@ html
   body(id='{{ pageId }}')
       include(src='includes/_header.sgr')
       block(name='content')
+      include(src='includes/_footer.sgr')
 
-    block(name='javascript')
+  block(name='sprite')
+      include(src='./includes/_icon-sprite.sgr')
+
+  block(name='javascript')
       script(src='js/main.js' defer)
