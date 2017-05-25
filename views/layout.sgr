@@ -15,6 +15,7 @@ html
       link(rel='stylesheet' href='css/index.css')
 
   body(id='{{ pageId }}')
+      include(src='includes/_header.sgr')
       block(name='content')
 
     block(name='javascript')
