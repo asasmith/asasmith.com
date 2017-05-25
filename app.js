@@ -14,5 +14,6 @@ module.exports = {
     locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } }
   }),
   postcss: cssStandards(),
-  babel: jsStandards()
+  babel: jsStandards(),
+  server: {open: false}
 }
