@@ -18,7 +18,8 @@ html
       include(src='includes/_header.sgr')
       block(name='content')
       include(src='includes/_footer.sgr')
-      include(src='includes/_icon-sprite.sgr')
 
+  block(name='icons')
+    include(src='includes/_icon-sprite.sgr')
   block(name='javascript')
       script(src='js/main.js' defer)
