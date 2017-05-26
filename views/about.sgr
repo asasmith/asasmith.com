@@ -1,0 +1,5 @@
+extends(src='layout.sgr')
+  block(name='content')
+    main
+      h1 about me
+      p I used to build houses. Now I build websites. I'm also learning vim, becuase I'm a glutton for punishment
