@@ -1,7 +1,28 @@
 footer
+  display: flex
+  flex-direction: column
+  margin-bottom: 4em
+
+  @media (min-width: 25.875em)
+    margin-bottom: 0
+
+  & #email
+    padding: 0
+    margin: auto
+    order: 2
+    text-align: center
+
+    /*& a
+      border-bottom: 1px solid transparent
+      transition: all .25s ease
+
+      &:hover
+        border-bottom: 1px solid black*/
 
   & #social
     display: flex
     justify-content: space-between
+    flex: 1 1 auto
+    order: 1
     max-width: 15em
     margin: auto

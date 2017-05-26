@@ -1,4 +1,6 @@
 footer
+  #email
+    p: a(href='mailto:asa@asasmith.com') asa@asasmith.com
   ul#social
     li: a(href="https://www.github.com/asasmith")
       |

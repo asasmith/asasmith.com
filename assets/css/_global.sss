@@ -3,7 +3,10 @@ body
 
   display: flex
   flex-direction: column
-  min-height: 100vh
+  min-height: 90vh
+
+  @media (min-width: 26em)
+    min-height: 100vh
 
   & main
     flex: 1
@@ -19,6 +22,12 @@ ul
 a
   color: currentColor
   text-decoration: none
+  border-bottom: 1px solid transparent
+  transition: all .25s ease
+
+  &:hover
+    /*border-bottom: 1px solid black*/
+    color: #1ed760
 
 svg.icon
   display: inline-block

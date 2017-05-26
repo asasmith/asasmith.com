@@ -1,4 +1,6 @@
 header
+  h2#logo: a(href="/") &lt/A&gt
+
   nav
     ul
       li about
