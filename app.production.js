@@ -8,7 +8,7 @@ module.exports = {
   // minify js
   plugins: [new UglifyJsPlugin()],
   // minify html and css
-  reshape: htmlStandards({ minify: true }),
+  reshape: htmlStandards({ minify: false}),
   postcss: cssStandards({
     minify: true,
     warnForDuplicates: false // cssnano includes autoprefixer
