@@ -3,5 +3,5 @@ header
 
   nav
     ul
-      li about
+      li: a(href="/about") about
       li contact
