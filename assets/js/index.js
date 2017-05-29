@@ -31,3 +31,5 @@ const app = {
     }
   }
 }
+
+app.init()
