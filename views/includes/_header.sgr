@@ -1,7 +1,7 @@
 header
-  h2#logo: a(href="/") &lt/A&gt
-
+  a(href='/')
+    include(src='includes/_logo.sgr')
   nav
     ul
-      li: a(href="/about") about
+      li: a(href="#about") about
       li contact

@@ -2,6 +2,9 @@ extends(src='layout.sgr')
   block(name='content')
     main
       h1 about me
+      img(src='img/headshot-stax.jpg')
       p I used to build houses. Now I build websites. I'm also learning vim, because I'm a glutton for punishment. I like javascript, HTML and CSS. I also like coming up with creative solutions for everyday problems.
+      |  I used to build houses. Now I build websites. I'm also learning vim, because I'm a glutton for punishment. I like javascript, HTML and CSS. I also like coming up with creative solutions for everyday problems.
+
 
     section#skills
