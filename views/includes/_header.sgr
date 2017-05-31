@@ -3,5 +3,5 @@ header
     include(src='includes/_logo.sgr')
   nav
     ul
-      li: a(href="#about") about
+      li: a(href="/about") about
       li contact
