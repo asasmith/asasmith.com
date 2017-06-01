@@ -4,3 +4,4 @@ header
   nav
     ul
       li: a(href="/about") about
+      li: a(href="mailto:asa@asasmith.com")
