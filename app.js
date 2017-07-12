@@ -1,3 +1,5 @@
+require('dotenv').config({ silent: true })
+
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('babel-preset-env')
@@ -14,17 +16,18 @@ module.exports = {
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: Object.assign(
-      locals
-    )
+    locals: (ctx) => { return Object.assign(
+      locals,
+      {pageId: pageId(ctx)}
+    )}
   }),
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: 'd552423567ed1794c6a1',
+      token: process.env.DATO_API_TOKEN,
       models: [{
         name: 'about',
-        json: 'about.json'
+        json: 'dato-cms.json'
       }],
     })
   ],
