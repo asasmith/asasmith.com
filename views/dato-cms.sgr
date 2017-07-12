@@ -1,0 +1,6 @@
+extends(src='layout.sgr')
+  block(name='content')
+    main
+      h1 {{ dato.about[0].heroStatement }}
+      p {{ dato.about[0].mainContent  }}
+      img(src='https://{{ dato._meta.imgixHost + dato.about[0].heroImage.path }}')
