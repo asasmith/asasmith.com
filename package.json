@@ -13,7 +13,7 @@
     "reshape-standard": "^2.0.0",
     "spike": "^2.0.1",
     "spike-css-standards": "^2.0.1",
-    "spike-datocms": "^1.0.0",
+    "spike-datocms": "^0.4.1",
     "spike-js-standards": "^2.0.2",
     "spike-page-id": "^1.0.0",
     "webpack": "^2.5.1"
@@ -22,7 +22,6 @@
     "ava": "^0.20.0",
     "rimraf": "^2.6.0",
     "snazzy": "^7.0.0",
-    "spike-core": "^2.0.1",
     "standard": "^10.0.0"
   },
   "homepage": "https://github.com/asasmith/asasmith-com",
