@@ -3,6 +3,7 @@ const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const dynamicImport = require('babel-plugin-syntax-dynamic-import')
 const pageId = require('spike-page-id')
+const datoCms = require('spike-datocms')
 
 module.exports = {
   devtool: 'source-map',
