@@ -4,7 +4,10 @@ extends(src='layout.sgr')
       section
         figure
           img(src='img/headshot-stax.jpg')
-        p I used to build houses. Now I build websites. I'm also learning vim, because I'm a glutton for punishment. I like javascript, HTML and CSS. I also like coming up with creative solutions for everyday problems.
+        .wrapper
+          h2 Asa Smith
+          h3 Front End Dev &#10070 Father &#10070 Coffee Lover
+          p I used to build houses. Now I build websites. I like javascript, HTML and CSS. I love to learn, build, and find creative solutions for everyday problems. I'm also learning vim.
 
 
     section#skills
