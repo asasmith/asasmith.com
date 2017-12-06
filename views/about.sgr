@@ -10,7 +10,7 @@ extends(src='layout.sgr')
           p I used to build houses. Now I build websites. I like javascript, HTML and CSS. I love to learn, build, and find creative solutions for everyday problems. I'm also learning vim.
           h4 Recent Projects
           a(href='https://www.thinkstack.co/') thinkstack.co
-          a(href='https://gundalowjuice.com/') gundalowjuice.com  
+          a(href='https://www.audifielddc.com/') audifielddc.com  
           a(href='http://backroom.io/') backroom.io
           a(href='http://www.whostaffing.com/') whostaffing.com
 
