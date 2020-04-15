@@ -1,8 +1,0 @@
-header
-  a(href='/')
-    img(id='logo' src='img/asa-logo.png')
-  nav
-    ul
-      li: a(href="/about") about
-      li: a(href="mailto:asa@asasmith.com") contact
-      li: a(href="https://medium.com/@Asa_Smith" target="_blank") blog

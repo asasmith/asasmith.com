@@ -1,5 +1,0 @@
-extends(src='layout.sgr')
-  block(name='content')
-
-    main#hero
-      h1.h1
