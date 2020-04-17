@@ -67,10 +67,10 @@ html {
   dfn {
     font-style: italic;
   }
-  h1 {
+  /* h1 {
     font-size: 2em;
     margin: 0.67em 0;
-  }
+  } */
   mark {
     background-color: #ff0;
     color: #000;
@@ -207,7 +207,7 @@ html {
   }
   body {
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: georgia, serif;
+    /* font-family: georgia, serif; */
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -227,7 +227,7 @@ html {
     padding-top: 0;
     margin-bottom: 1.45rem;
   }
-  h1 {
+  /* h1 {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -243,8 +243,8 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
     line-height: 1.1;
-  }
-  h2 {
+  } */
+  /* h2 {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -260,8 +260,8 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
     line-height: 1.1;
-  }
-  h3 {
+  } */
+  /* h3 {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -277,8 +277,8 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
     line-height: 1.1;
-  }
-  h4 {
+  } */
+  /* h4 {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -294,8 +294,8 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 1rem;
     line-height: 1.1;
-  }
-  h5 {
+  } */
+  /* h5 {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -311,7 +311,7 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
     line-height: 1.1;
-  }
+  } */
   h6 {
     margin-left: 0;
     margin-right: 0;
