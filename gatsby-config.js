@@ -1,8 +1,10 @@
 module.exports = {
     siteMetadata: {
-        title: `Asa Smith | My Digital Garden`,
+        title: `Asa Smith`,
+        titleTemplate: `%s | Digital Garden`,
         description: `Random thoughts and musings`,
-        author: `asasmith`
+        url: `https://www.asasmith.com`,
+        twitterHandle: `@asa_smith`,
     },
     plugins: [
         // {
@@ -33,5 +35,6 @@ module.exports = {
                },
            },
         },
+        `gatsby-plugin-react-helmet`,
     ],
 }
