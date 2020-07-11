@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,10 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.5",
+    "babel-jest": "^26.1.0",
+    "babel-preset-gatsby": "^0.5.2",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -40,6 +45,9 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
-    "prettier": "^2.0.5"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "react-test-renderer": "^16.13.1"
   }
 }
