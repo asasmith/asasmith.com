@@ -1,32 +1,32 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import './layout.css' 
+import './layout.css';
 
-import Header from './header'
+import Header from './header';
 
-export default function Layout ({ children }) {
-    const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+export default function Layout({ children }) {
+	const data = useStaticQuery(graphql`
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`);
 
-  return (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main
-            style={{
-                margin: `0 auto`,
-            }} 
-        >
-            {children}
-        </main>
-        {/* <footer
+	return (
+		<>
+			<Header siteTitle={data.site.siteMetadata.title} />
+			<main
+				style={{
+					margin: `0 auto`,
+				}}
+			>
+				{children}
+			</main>
+			{/* <footer
             style={{
                 margin: `0 auto 2rem`,
             }} 
@@ -35,6 +35,6 @@ export default function Layout ({ children }) {
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer> */}
-      </>
-  )
+		</>
+	);
 }
