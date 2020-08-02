@@ -9,24 +9,24 @@
     },
     "rules": {
         "prettier/prettier": [
-            "error",
+            2,
             {
                 "singleQuote": true,
                 "semicolons": true,
-                "tabs": true
+                "useTabs": false
             }
         ],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/jsx-indent": [2, "tab"],
-        "react/jsx-indent-props": [2, "tab"],
+        "react/jsx-indent": [2, "spaces"],
+        "react/jsx-indent-props": [2, "spaces"],
         "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
         "jsx-a11y/anchor-is-valid": [
             "error",
                 {
-                "components": ["Link"],
-                "specialLink": ["to"],
-                "aspects": ["noHref", "invalidHref", "preferButton"]
+                    "components": ["Link"],
+                    "specialLink": ["to"],
+                    "aspects": ["noHref", "invalidHref", "preferButton"]
                 }
         ]
     }
-  }
+}
