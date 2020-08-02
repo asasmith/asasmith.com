@@ -1,17 +1,11 @@
-import Typography from 'typography'
+import Typography from 'typography';
 
 const typography = new Typography({
     baseFontSize: `18px`,
     baseLineHeight: 1.666,
-    headerFontFamily: [
-        `Fjalla One`,
-        `sans-serif`,
-    ],
+    headerFontFamily: [`Fjalla One`, `sans-serif`],
     headerWeight: 300,
-    bodyFontFamily: [
-        `Noto Sans`,
-        `sans-serif`,
-    ],
-})
+    bodyFontFamily: [`Noto Sans`, `sans-serif`],
+});
 
-export default typography
+export default typography;
