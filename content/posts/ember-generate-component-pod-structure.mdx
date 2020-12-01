@@ -1,0 +1,32 @@
+---
+slug: /ember-generate-component-pod-structure
+title: Using Ember CLI to generate components using pod structure
+tags: ["javascript", "ember js", "ember-cli", "wip"]
+--- 
+
+Trying to figure out how to get
+
+`ember generate`
+
+command to build files into a specific directory to be more inline with pod structure.
+
+The docs were super unhelpful.
+
+Tried using the `--path` flag thinking that something like
+
+`ember generate component new-comp --path "path-to-dir"`
+
+would work but no luck.
+
+Tried every combination possible, landed on this.
+
+`ember generate component new-comp --pods --no-path`
+
+That gives me a file structure that looks like
+
+```
+app/
+    new-comp/
+        component.js
+        template.js
+```
