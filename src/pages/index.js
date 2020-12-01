@@ -19,6 +19,8 @@ export const query = graphql`
     }
 `
 
+// todo: test build hook
+
 export default function Index ({ data }) {
     const { edges: posts } =  data.allMdx;
 
