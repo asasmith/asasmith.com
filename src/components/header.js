@@ -6,6 +6,7 @@ export default function Header ({ siteTitle }) {
         <header 
             style={{
                 margin: `2rem auto`,
+                padding: `0 1rem`,
             }}>
             <h1>
                 <Link 
