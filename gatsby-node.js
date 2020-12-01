@@ -3,6 +3,8 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions, reporter }) => {
 	const { createPage } = actions;
 
+	// TODO: convert MDX to MD?
+
 	const result = await graphql(`
 		query {
 			allMdx {
