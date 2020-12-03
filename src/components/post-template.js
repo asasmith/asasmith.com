@@ -11,9 +11,10 @@ const shortcodes = { Link }; // Provide common components here
 export default function PageTemplate({ data: { mdx } }) {
 	return (
 		<Layout>
-			<SEO title={mdx.frontmatter.title} description="testing description" />
+			<SEO title={mdx.frontmatter.title} description={mdx.frontmatter.title} />
 			<MDXProvider components={shortcodes}>
 				<h1>{mdx.frontmatter.title}</h1>
+				<p>{mdx.frontmatter.date}</p>
 				<MDXRenderer>{mdx.body}</MDXRenderer>
 			</MDXProvider>
 		</Layout>
@@ -23,9 +24,10 @@ export default function PageTemplate({ data: { mdx } }) {
 export const pageQuery = graphql`
 	query BlogPostQuery($id: String) {
 		mdx(id: { eq: $id }) {
-			id
 			body
+			id
 			frontmatter {
+				date
 				title
 			}
 		}

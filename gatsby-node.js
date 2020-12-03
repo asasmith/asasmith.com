@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 	posts.forEach(({ node }, index) => {
 		createPage({
 			path: node.frontmatter.slug,
-	    	component: path.resolve(`./src/components/test-post-layout.js`),
+	    	component: path.resolve(`./src/components/post-template.js`),
 			context: { id: node.id },
 		});
 	});
