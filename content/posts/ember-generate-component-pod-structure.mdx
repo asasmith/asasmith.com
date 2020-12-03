@@ -66,11 +66,11 @@ You can also update the `.ember-cli` config file like so
     "usePods": true
 }
 ```
-If you try to pass the `--pods` arg with a `"usePods": true` config ember-cli will throw a warning that using both is deprecated. The rest of my examples will show the `--pods` flag.
+If you try to pass the `--pods` arg with a `"usePods": true` config ember-cli will throw a warning that using both is deprecated. The rest of my examples will use the `--pods` flag.
 
-The problem I had is I was trying to create a component but I didn't want this file or it's template to be generated inside of a `/components` directory. Maybe this is a bad idea. If it is I'm sure the internet will tell me.
+The problem I had was trying to create a component but I didn't want the `component.js` file or its `template.hbs` file to be generated inside of a `/components` directory. Maybe this is a bad idea. If it is I'm sure the internet will tell me.
 
-The `--path` option accepts a string as it's argument. You can use it to pass a file path. The file path passed must be relative to the `/app` directory.
+The `--path` option accepts a string as its argument. You can use it to pass a file path. The file path passed must be relative to the `/app` directory.
 
 ```
 app/
