@@ -1,0 +1,84 @@
+---
+date: "1/8/2022"
+slug: /taiwindcss-v3-emberjs-setup
+tags: ["javascript", "ember js", "tailwind css"]
+title: Using Tailwind CSS v3 with Ember JS
+---
+
+`npx ember-cli new tailwindcss-demo --no-welcome`
+`cd tailwindcss-demo`
+
+Install tailwind and related packages
+`npm install taiwindcss autoprefixer --save-dev // no need for purgecss anymore`
+
+Install postcss add on 
+`ember install ember-cli-postcss`
+
+Create tailwind config
+```
+// I create tailwind dir in styles
+// this is a personal organization choice, the config file could live anywhere
+mkdir app/styles/tailwind
+
+// create tailwind config file
+// last arg is path to config file, if no arg is provided it's created at the root of your project
+// this will be needed in the next step
+npx tailwind init app/styles/tailwind/config.js
+```
+
+No more `purge` key in config file
+Update `content` key with paths to all template files
+Docs [here](https://tailwindcss.com/docs/content-configuration)
+```
+module.exports = {
+  content: ['./app/**/*.hbs'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+update `app/styles/app.css`
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Update `ember-build-cli.js`
+
+```
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const autoprefixer = require('autoprefixer');
+const tailwind = require('tailwindcss');
+
+module.exports = function (defaults) {
+  let app = new EmberApp(defaults, {
+    // Add options here
+    postcssOptions: {
+      compile: {
+        // track changes in template, css, scss, and tailwind config files
+        cacheInclude: [/.*\.(css|scss|hbs)$/, /.tailwind\/config\.js$/],
+        plugins: [
+          {
+            module: autoprefixer,
+            options: {},
+          },
+          {
+            module: tailwind,
+            options: {
+              config: './app/styles/tailwind/config.js',
+            },
+          },
+        ],
+      },
+    },
+  });
+
+  return app.toTree();
+};
+```
