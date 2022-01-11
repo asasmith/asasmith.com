@@ -41,7 +41,8 @@ npx tailwind init app/styles/tailwind/config.js
 
 There isn't a `purge` key in the config file anymore. Update the `content` key with paths to all template files. The config docs are [here](https://tailwindcss.com/docs/content-configuration)
 
-```
+```javascript
+// app/styles/tailwind/config.js
 module.exports = {
   content: ['./app/**/*.hbs'],
   theme: {
@@ -53,7 +54,8 @@ module.exports = {
 
 Update `app/styles/app.css`
 
-```
+```css
+// app/styles/app.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -61,7 +63,8 @@ Update `app/styles/app.css`
 
 Update `ember-build-cli.js`
 
-```
+```javascript
+// ember-build-cli.js
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
