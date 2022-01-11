@@ -5,30 +5,42 @@ tags: ["javascript", "ember js", "tailwind css"]
 title: Using Tailwind CSS v3 with Ember JS
 ---
 
-`npx ember-cli new tailwindcss-demo --no-welcome`
-`cd tailwindcss-demo`
+Tailwind CSS v3 has been released and there is a bunch of cool new features available (I'm mostly interested in the "just in time" engine being standard now). The standard setup for an ember project has changed a little and there doesn't seem to be a lot of good resources available for this setup.
 
-Install tailwind and related packages
-`npm install taiwindcss autoprefixer --save-dev // no need for purgecss anymore`
+Create a new ember project.
 
-Install postcss add on 
-`ember install ember-cli-postcss`
-
-Create tailwind config
 ```
-// I create tailwind dir in styles
-// this is a personal organization choice, the config file could live anywhere
+npx ember-cli new tailwindcss-demo --no-welcome
+cd tailwindcss-demo
+```
+
+Install tailwind and related packages.
+
+```
+npm install taiwindcss autoprefixer --save-dev // no need for purgecss anymore
+```
+
+Install postcss add on.
+
+```
+ember install ember-cli-postcss
+```
+
+Create tailwind config.
+
+```
+// I create a tailwind dir in styles and add the config file there
+// this is a personal organizational choice, the config file could live anywhere
 mkdir app/styles/tailwind
 
 // create tailwind config file
-// last arg is path to config file, if no arg is provided it's created at the root of your project
+// last arg is path to config file, if no arg is provided it will created at the root of your project
 // this will be needed in the next step
 npx tailwind init app/styles/tailwind/config.js
 ```
 
-No more `purge` key in config file
-Update `content` key with paths to all template files
-Docs [here](https://tailwindcss.com/docs/content-configuration)
+There isn't a `purge` key in the config file anymore. Update the `content` key with paths to all template files. The config docs are [here](https://tailwindcss.com/docs/content-configuration)
+
 ```
 module.exports = {
   content: ['./app/**/*.hbs'],
@@ -39,7 +51,7 @@ module.exports = {
 }
 ```
 
-update `app/styles/app.css`
+Update `app/styles/app.css`
 
 ```
 @tailwind base;
@@ -82,3 +94,6 @@ module.exports = function (defaults) {
   return app.toTree();
 };
 ```
+That's it. You should be up and running with Ember and Tailwind now!
+
+[Repo](https://github.com/asasmith/tailwindcss-v3-ember) for this demo.
