@@ -1,0 +1,9 @@
+apiVersion: asasmith.dev/v1alpha
+kind: Component
+metadata:
+  name: personal-website
+  description: random musings and unrelated thoughts
+spec:
+  type: website
+  lifecycle: production
+  owner: tracking-team
