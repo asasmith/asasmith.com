@@ -2,15 +2,14 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 export default function Header ({ siteTitle }) {
-  console.log('testing gh actions');
     return (
-        <header 
+        <header
             style={{
                 margin: `2rem auto`,
                 padding: `0 1rem`,
             }}>
             <h1>
-                <Link 
+                <Link
                     to='/'
                     style={{
                         color: `#0c0c0c`,
@@ -22,4 +21,4 @@ export default function Header ({ siteTitle }) {
             </h1>
         </header>
     )
-} 
+}
