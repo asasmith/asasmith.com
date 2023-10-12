@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 export default function Header ({ siteTitle }) {
+  console.log('testing gh actions');
     return (
         <header 
             style={{
