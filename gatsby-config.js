@@ -4,7 +4,7 @@ module.exports = {
 		titleTemplate: `%s | Digital Garden`,
 		description: `Random thoughts and musings`,
 		url: `https://www.asasmith.com`,
-		twitterHandle: `@asa_smith`,
+		twitterHandle: `@average_dev_asa`,
 	},
 	plugins: [
 		// {
