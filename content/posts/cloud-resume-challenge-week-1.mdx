@@ -28,7 +28,7 @@ One of the requirements is to not use the AWS console to create any of the neces
 CDK, as I understand it so far, allows you to write code to define different aws resources. Initializing a project is simple. Just run the following commands in your terminal:
 ```
 // create a new empty directory for the project
-mkdir my-cdk-app && cd my-cdk-app
+mkdir cloud-resume-infra && cd cloud-resume-infra 
 
 // initialize new cdk app specifying typescript as the language
 cdk init app --language typescript
@@ -82,3 +82,4 @@ Now that I have the initial CDK setup and an S3 bucket, my next steps are:
 
 For future posts, I’ll break things down further—IAM setup, GitHub Actions workflows, API design, and more. But for now, this is a solid start.
 
+Here is my `cloud-resume-infra` [repo](https://github.com/asasmith/cloud-resume-infra) for reference.
