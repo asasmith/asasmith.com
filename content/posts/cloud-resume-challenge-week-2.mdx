@@ -1,0 +1,69 @@
+# Cloud Resume Challenge – Progress Update #2
+
+Since my last update on the Cloud Resume Challenge, I've made several significant changes, resolved some unexpected problems, and refined my overall infrastructure strategy. Here's a detailed overview of my recent progress:
+
+## Diagnosing a Certificate Issue (Not Just a Validation Problem)
+
+**Initial Problem:**
+Initially, I suspected my AWS ACM certificate issue was related to DNS validation delays. However, after deeper investigation, I discovered the actual issue stemmed from changing a resource name in my CDK code.
+
+**What Actually Happened:**
+- I updated the logical name of my ACM certificate resource within my CDK stack. Although this change seemed minor, it led to unforeseen conflicts with CloudFormation, resulting in confusing errors that were not immediately apparent.
+- The subtle nature of this issue complicated troubleshooting because CloudFormation events didn't clearly indicate the root cause. This scenario reinforced the importance of careful naming practices when working with infrastructure as code.
+
+## Resolving the Issue by Manual Deletion and Redeployment
+
+After pinpointing the issue as a naming conflict, the fastest and most straightforward resolution was:
+
+- Manually deleting the entire CloudFormation stack to ensure all conflicting resources were fully removed.
+- Redeploying the stack using `cdk deploy`, which cleanly rebuilt my S3 bucket, CloudFront distribution, and ACM certificate without conflicts.
+
+## Why Good Naming Conventions Matter
+
+This experience highlights the critical importance of consistent, clear, and stable naming conventions from the outset:
+- Changing resource names later in development can result in subtle but significant infrastructure conflicts.
+- Establishing good naming conventions early significantly simplifies troubleshooting and prevents hard-to-diagnose issues.
+
+## Completing DNS Validation and Attaching the Certificate
+
+Since my domain (`asasmith.dev`) is managed externally with Hover, I chose manual DNS validation instead of using Route53:
+
+- After I redeployed my stack I used the following cli command to get a list of certificates:
+  ```bash
+  aws acm list certificates --region us-east-1
+  ```
+- Then using the cert's arn and another cli command I was able to get the dns validation info:
+  ```bash
+  aws acm describe-certificate --region us-east-1 --certificate-arn <CERTIFICATE_ARN>
+  ```
+- I added the required CNAME record in Hover’s DNS settings.
+- Verified DNS propagation, and my ACM certificate status quickly transitioned to `ISSUED`.
+
+I have since successfully attached this validated ACM certificate to my CloudFront distribution.
+
+## Mapping a Subdomain to CloudFront
+
+Additionally, I've configured Hover to map the subdomain `resume.asasmith.dev` directly to my CloudFront distribution, ensuring visitors can securely access my static resume site using HTTPS. I've confirmed that the subdomain is functioning exactly as expected.
+
+## Single-Stack Infrastructure Approach
+
+Previously, I organized my CDK project into multiple stacks based on resource types, complicating dependency management and debugging. Now, I've transitioned to:
+
+- A single, unified stack containing all the necessary resources for my static website.
+- Simpler management, clearer resource dependencies, and easier troubleshooting.
+
+## Lessons Learned
+
+- **Naming conventions:** Good, stable, and descriptive naming upfront is essential for avoiding subtle infrastructure conflicts.
+- **Manual resource cleanup:** Sometimes deleting and redeploying resources completely is the most efficient path forward.
+- **Infrastructure consolidation:** Keeping related resources in a single stack simplifies operations and debugging.
+
+## Next Steps
+
+With my static website fully operational, the next phase includes:
+- Defining and deploying a DynamoDB table to store visitor data.
+- Creating a Lambda function to interact with DynamoDB (I'm currently considering which programming language to use).
+- Setting up API Gateway to provide an endpoint to my Lambda function—this will be a learning experience as I haven't worked with API Gateway before.
+
+Stay tuned for further updates as I continue building out and enhancing my Cloud Resume project!
+
